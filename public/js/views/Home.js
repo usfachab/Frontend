@@ -1,33 +1,30 @@
 import { stylesheet } from "../theme/homeTheme.js";
 
-export class Home extends HTMLElement
+export default class Home extends HTMLElement
 {
 	constructor()
 	{
 	  super();
-	  this.attachShadow({ mode: 'open' });
-	  this.shadowRoot.adoptedStyleSheets = [stylesheet];
 	}
     
 	connectedCallback()
 	{
+        const style = document.createElement("style");
         const template = document.getElementById("home-page");
         const templateContent = template.content.cloneNode(true);
-        this.shadowRoot.appendChild(templateContent);
 
-        const links = this.shadowRoot.querySelectorAll("a");
+        style.textContent = stylesheet;
+        this.appendChild( style );
+        this.appendChild(templateContent);
+
+        const links = this.querySelectorAll("a");
         links.forEach( link => {
             link.addEventListener( "click", (e) => {
                 e.preventDefault();
-                this.render();
+                const href = e.target.getAttribute("href");
+                global.router.navigateTo( href, true );
             });
-        }); 
-    }
-    render()
-    {
-        const loginPage = document.createElement("login-page");
-        document.appendChild( loginPage );
-
+        });
     }
 }
   

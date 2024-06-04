@@ -16,30 +16,23 @@ export class Router
             this.routes.push(route);
     });
     }
-    navigateTo(path, addToHistory = true) 
+    
+    navigateTo(path, addToHistory = true)
     {
         if (addToHistory) history.pushState({ path }, null, path);
         const route = this.routes.find((route) => route.path === location.pathname) ||  this.routes.find((route) => route.path === "*");
-        this.container.innerHTML = "";
-		this.container.appendChild( route.view() );
+        if ( path !== "/login" )
+            this.container.innerHTML = "";
+		this.container.appendChild( route.view( path.substring(1) ) );
         window.scrollX = 0;
         window.scrollY = 0;
     }
+
     init()
     {
-        const links = document.querySelectorAll("a[data-link]");
-        links.forEach((link) => {
-            link.addEventListener("click", (event) => {
-            event.preventDefault();
-            const url = event.target.getAttribute("href");
-            this.navigateTo(url);
-            });
-        });
-
         window.addEventListener("popstate", (e) => {
             this.navigateTo(e.state.path, false);
         });
-
         this.navigateTo(location.pathname);
     }
 }

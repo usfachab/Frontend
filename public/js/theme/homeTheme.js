@@ -1,14 +1,4 @@
-const stylesheet = new CSSStyleSheet();
-stylesheet.replaceSync(`
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
-:host
-{
-    width:100%;
-    height:100%;
-    background-color: #1D203E !important;
-    font-family: 'Press Start 2P' !important;
-}
-
+export const stylesheet = `
 nav {
   padding: 20px 200px 20px 200px !important;
   display:flex;
@@ -58,6 +48,4 @@ a {
 {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
 }
-`);
-
-export { stylesheet };
+`;

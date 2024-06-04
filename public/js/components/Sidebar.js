@@ -1,0 +1,21 @@
+import { stylesheet } from "./theme/sidebarTheme.js";
+
+export default class Sidebar extends HTMLElement
+{
+    constructor()
+    {
+        super();
+        this.attachShadow({mode: "open"});
+        this.shadowRoot.adoptedStyleSheets = [stylesheet];
+        console.log("side bar constructor");
+    }
+    
+    connectedCallback()
+    {
+        const template = document.getElementById("side-bar");
+        const sidebarComp = template.content.cloneNode(true);
+        this.shadowRoot.appendChild( sidebarComp );
+    }
+}
+
+customElements.define('side-bar-comp', Sidebar);
