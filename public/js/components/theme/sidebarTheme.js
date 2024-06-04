@@ -140,7 +140,6 @@ a {
   }
 }
 
-
 .green_dot::before
 {
     content: "";
