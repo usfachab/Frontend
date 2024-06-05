@@ -7,7 +7,6 @@ export default class Sidebar extends HTMLElement
         super();
         this.attachShadow({mode: "open"});
         this.shadowRoot.adoptedStyleSheets = [stylesheet];
-        console.log("side bar constructor");
     }
     
     connectedCallback()
@@ -17,5 +16,4 @@ export default class Sidebar extends HTMLElement
         this.shadowRoot.appendChild( sidebarComp );
     }
 }
-
 customElements.define('side-bar-comp', Sidebar);

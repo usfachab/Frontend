@@ -6,7 +6,7 @@ stylesheet.replaceSync(`
   --first-color: #1D203E;
   --first-color-light: #afa5d9;
   --white-color: #f7f6fb;
-  /* --body-font: "Nunito", sans-serif; */
+  --body-font: "Press Start 2P", sans-serif !important;
   --normal-font-size: 1rem;
   --z-fixed: 100;
 }
@@ -15,49 +15,15 @@ stylesheet.replaceSync(`
 ::after {
   box-sizing: border-box;
 }
-body {
-  position: relative;
-  margin: var(--header-height) 0 0 0;
-  padding: 0 1rem;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  transition: 0.5s;
-}
+
 a {
     position: relative;
-  text-decoration: none !important;
+    text-decoration: none !important;
+    color: #fff;
 }
-.header {
-  width: 100%;
-  height: var(--header-height);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-  background-color: var(--white-color);
-  z-index: var(--z-fixed);
-  transition: 0.5s;
-}
-.header_toggle {
-  color: var(--first-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.header_img {
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.header_img img {
-  width: 40px;
-}
+
 .l-navbar {
+  box-shadow: rgba(100, 100, 100, 0.15) 1.95px 1.95px 2.6px !important;
   position: fixed;
   top: 0;
   left: -30%;
@@ -87,7 +53,7 @@ a {
   margin-bottom: 2rem;
 }
 .nav_logo-icon {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   color: var(--white-color);
 }
 .nav_logo-name {
