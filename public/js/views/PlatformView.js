@@ -1,7 +1,8 @@
 import Sidebar from "../components/Sidebar.js";
 import StartGame from "../components/StartGame.js";
 
-// import { stylesheet } from "../theme/platformTheme.js";
+import { stylesheet } from "../theme/platformTheme.js";
+
 export default class Platform extends HTMLElement {
   constructor()
   {
@@ -10,12 +11,13 @@ export default class Platform extends HTMLElement {
 
   connectedCallback()
   {
-    // const style = document.createElement("style");
+    const style = document.createElement("style");
     const template = document.getElementById("platform-page");
     const templateContent = template.content.cloneNode(true);
 
-    // style.textContent = stylesheet;
-    // this.appendChild(style);
+    style.textContent = stylesheet;
+    this.appendChild(style);
+    this.setAttribute("id", "platform");
     this.appendChild(templateContent);
   }
 }

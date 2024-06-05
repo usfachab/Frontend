@@ -34,6 +34,7 @@ a {
   transition: 0.5s;
   z-index: var(--z-fixed);
 }
+
 .nav {
   height: 100%;
   display: flex;
@@ -41,6 +42,7 @@ a {
   justify-content: space-between;
   overflow: hidden;
 }
+
 .nav_logo,
 .nav_link {
   display: grid;
@@ -49,13 +51,16 @@ a {
   column-gap: 1rem;
   padding: 0.5rem 0 0.5rem 1.5rem;
 }
+
 .nav_logo {
   margin-bottom: 2rem;
 }
+
 .nav_logo-icon {
   font-size: 1.75rem;
   color: var(--white-color);
 }
+
 .nav_logo-name {
   color: var(--white-color);
   font-weight: 700;
