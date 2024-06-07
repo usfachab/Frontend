@@ -13,24 +13,26 @@ stylesheet.replaceSync(`
   
 :host
   {
-        width: 85%;
-        height: 100%;
-      box-sizing: border-box;
-      background-color: red;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
+    width: 90%;
+    height: 25%;
+    position: relative;
+    border-radius: 20px;
   }
   
-  .container {
-    width: 75%;
-    height: 75%;
+  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin-top: 30px;
+    background-color: black;
   }
-  
-//   .background img{
-//       width: 100%;
-//       height: 100%;
-//   }
+  a
+  {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `);
 
 export { stylesheet };

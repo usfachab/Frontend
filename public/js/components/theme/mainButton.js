@@ -1,5 +1,9 @@
 const stylesheet = new CSSStyleSheet();
 stylesheet.replaceSync(`
+:host
+{
+  z-index: 101;
+}
 .home-buttons{
     padding: 6px 20px 6px 20px;
     border-radius: 6px;

@@ -1,5 +1,11 @@
 const stylesheet = new CSSStyleSheet();
 stylesheet.replaceSync(`
+:host
+{
+  flex-grow: 0.5;
+  background-color: green;
+}
+
 :root {
   --header-height: 3rem;
   --nav-width: 77px;
