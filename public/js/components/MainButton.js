@@ -7,7 +7,6 @@ export default class MainButton extends HTMLElement
         super();
         this.attachShadow({mode: "open"});
         this.shadowRoot.adoptedStyleSheets = [stylesheet];
-        // console.log("main button called");
     }
     
     connectedCallback()

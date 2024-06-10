@@ -65,12 +65,12 @@
         <div class="sub-login-form">
           <div class="logo">Pong.me</div>
           <div class="google-intra-login">
-            <a href="/login" class="google-btn">
+            <a href="/login" class="google-btn" name="google">
               <button type="button" role="button" class="button-23">
                 <span class="G">G </span>Login with google<span> > </span>
               </button>
             </a>
-            <a href="/login" class="intra-btn">
+            <a href="/login" class="intra-btn" name="intra">
               <button type="button" role="button" class="button-23 intra-42">
                 <span class="42">42 </span>Login with Intra<span> > </span>
               </button>
@@ -146,13 +146,20 @@
     </template>
 
     <template id="start-game">
-          <img
-            src="src/img/background.jpg"
-            alt="Pong retro game background"
-          />
-        <a href="#">
-          <main-button name="Play Now"></main-button>
-        </a>
+      <img src="" alt="" />
+      <a href="#">
+        <main-button name="Play Now"></main-button>
+      </a>
+    </template>
+
+    <template id="player-rank-component">
+      <div class="container">
+        <div class="avatar">
+          <!-- <img src="" alt="avatar"> -->
+        </div>
+        <div class="name"></div>
+        <div class="points" ></div>
+      </div>
     </template>
 
     <template id="platform-page">
@@ -161,15 +168,16 @@
         <side-bar-comp></side-bar-comp>
       </div>
       <div id="middle">
-        <!-- play now-->
-        <start-game-comp></start-game-comp>
-        <div id="top-players">
-        </div>
+        <!-- play now -->
       </div>
       <div id="chat">
         <!-- chat -->
         <chat-comp></chat-comp>
       </div>
+    </template>
+
+    <template id="profile-page">
+
     </template>
   </body>
 </html>

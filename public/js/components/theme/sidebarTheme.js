@@ -8,7 +8,7 @@ stylesheet.replaceSync(`
 
 :root {
   --header-height: 3rem;
-  --nav-width: 77px;
+  --nav-width: 85px;
   --first-color: #1D203E;
   --first-color-light: #afa5d9;
   --white-color: #f7f6fb;
@@ -30,9 +30,8 @@ a {
 
 .l-navbar {
   box-shadow: rgba(100, 100, 100, 0.15) 1.95px 1.95px 2.6px !important;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: -30%;
   width: var(--nav-width);
   height: 100vh;
   background-color: var(--first-color);
@@ -89,33 +88,33 @@ a {
 .height-100 {
   height: 100vh;
 }
-@media screen and (min-width: 768px) {
-  body {
-    margin: calc(var(--header-height) + 1rem) 0 0 0;
-    padding-left: calc(var(--nav-width) + 2rem);
-  }
-  .header {
-    height: calc(var(--header-height) + 1rem);
-    padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
-  }
-  .header_img {
-    width: 40px;
-    height: 40px;
-  }
-  .header_img img {
-    width: 45px;
-  }
-  .l-navbar {
-    left: 0;
-    padding: 1rem 1rem 0 0;
-  }
-  .show {
-    width: calc(var(--nav-width) + 156px);
-  }
-  .body-pd {
-    padding-left: calc(var(--nav-width) + 188px);
-  }
-}
+// @media screen and (min-width: 768px) {
+//   body {
+//     margin: calc(var(--header-height) + 1rem) 0 0 0;
+//     padding-left: calc(var(--nav-width) + 2rem);
+//   }
+//   .header {
+//     height: calc(var(--header-height) + 1rem);
+//     padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+//   }
+//   .header_img {
+//     width: 40px;
+//     height: 40px;
+//   }
+//   .header_img img {
+//     width: 45px;
+//   }
+//   .l-navbar {
+//     left: 0;
+//     padding: 1rem 1rem 0 0;
+//   }
+//   .show {
+//     width: calc(var(--nav-width) + 156px);
+//   }
+//   .body-pd {
+//     padding-left: calc(var(--nav-width) + 188px);
+//   }
+// }
 
 .green_dot::before
 {

@@ -7,5 +7,6 @@ const viewCallback = ( page ) => {
 export const routes = [
     { path: '/', view: viewCallback },
     { path: '/login', view: viewCallback },
-    { path: '/platform', view: viewCallback }
+    { path: '/platform', view: viewCallback },
+    { path: '/profile', view: viewCallback }
 ]

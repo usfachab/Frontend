@@ -16,4 +16,3 @@ export default class Sidebar extends HTMLElement
         this.shadowRoot.appendChild( sidebarComp );
     }
 }
-customElements.define('side-bar-comp', Sidebar);

@@ -1,27 +1,17 @@
 import { stylesheet } from "./theme/topPlayersTheme.js";
 
-export default class TopPlayers extends HTMLElement
-{
-    constructor()
-    {
-        super();
-        this.attachShadow({mode: "open"});
-        this.shadowRoot.adoptedStyleSheets = [stylesheet];
-        console.log("what the hell");
-    }
-    
-    // connectedCallback()
-    // {
+export default class TopPlayers extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.adoptedStyleSheets = [stylesheet];
+  }
 
-        
-    //     this.shadowRoot.appendChild( button );
-    // }
+  connectedCallback()
+  {
+    const template = document.getElementById( "player-rank-component" );
+    const playerRank = template.content.cloneNode(true);
+    this.shadowRoot.appendChild( playerRank );
+  }
 }
-customElements.define('top-players-comp', TopPlayers);
-
-
-
-// window.addEventListener("topPlayersLoaded", () => 
-        // {
-        //     console.log("event catched");
-        // })
+// customElements.define("player-rank-component", TopPlayers);

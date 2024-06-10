@@ -1,10 +1,10 @@
 export class Router
 {
-    constructor(containerId)
+    constructor()
     {
         this.routes = [];
-        this.container = document.getElementById(containerId);
     }
+
     addRoutes(arrayOfRoutes)
     {
         if (!Array.isArray(arrayOfRoutes)) throw new TypeError("Routes must be provided as an array");
@@ -17,13 +17,14 @@ export class Router
     });
     }
     
-    navigateTo(path, addToHistory = true)
+    navigateTo(path, containerId ,addToHistory = true)
     {
+        const section = document.getElementById(containerId);
         if (addToHistory) history.pushState({ path }, null, path);
         const route = this.routes.find((route) => route.path === location.pathname) ||  this.routes.find((route) => route.path === "*");
         if ( path !== "/login" )
-            this.container.innerHTML = "";
-		this.container.appendChild( route.view( path.substring(1) ) );
+            section.innerHTML = "";
+		section.appendChild( route.view( path.substring(1) ) );
         window.scrollX = 0;
         window.scrollY = 0;
     }
@@ -31,8 +32,8 @@ export class Router
     init()
     {
         window.addEventListener("popstate", (e) => {
-            this.navigateTo(e.state.path, false);
+            this.navigateTo(e.state.path, "root",false);
         });
-        this.navigateTo(location.pathname);
+        this.navigateTo(location.pathname, "root");
     }
 }

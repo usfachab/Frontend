@@ -22,7 +22,7 @@ export default class Home extends HTMLElement {
       link.addEventListener("click", (e) => {
         e.preventDefault();
         const href = e.target.getAttribute("href");
-        global.router.navigateTo(href, true);
+        global.router.navigateTo(href, "root", true);
       });
     });
   }
