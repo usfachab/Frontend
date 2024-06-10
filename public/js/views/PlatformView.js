@@ -22,11 +22,19 @@ export default class Platform extends HTMLElement {
     this.setAttribute("id", "platform");
     this.appendChild(templateContent);
 
+    
     customElements.define("side-bar-comp", Sidebar);
     customElements.define('start-game-comp', StartGame);
+
+    const pathname = window.location.pathname;
+    if ( "/platform" == pathname )
+      this.render(pathname, "");
+
   }
   
   render() {
+    const contentSection = this.querySelector("#middle");
+    console.log(contentSection);
     customElements.define("player-rank-component", TopPlayers);
   }
 }
