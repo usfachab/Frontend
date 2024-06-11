@@ -8,12 +8,15 @@ const ProxiedPlayers = new Proxy(Players, {
     target[prop] = value;
    
     if ( prop === "playersList" )
+      {
+        console.log("what");
         window.dispatchEvent( new Event("playersListLoaded") );
+      }
 
     return true;
   },
   get: (target, prop, receiver) => {
-    return target[prop].slice(0, 10);
+    return target[prop];
   },
 });
 export default ProxiedPlayers;

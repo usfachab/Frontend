@@ -15,8 +15,7 @@ const stylesheet = `
 }
 
 #middle {
-    // border-left: 1px solid green;
-    // border-right: 1px solid green;
+    padding-top: 60px !important;
     display: flex;
     flex-direction: column;
     row-gap: 3rem;

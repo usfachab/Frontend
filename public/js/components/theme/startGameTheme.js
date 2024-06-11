@@ -6,7 +6,7 @@ stylesheet.replaceSync(`
   height: 35%;
   position: relative;
   border-radius: 20px;
-  border: 1px solid #fff;
+  border: 1px solid rgba(100, 100, 100, 0.25);
 }
 
 // img{

@@ -7,11 +7,9 @@ export default class TopPlayers extends HTMLElement {
     this.shadowRoot.adoptedStyleSheets = [stylesheet];
   }
 
-  connectedCallback()
-  {
-    const template = document.getElementById( "player-rank-component" );
+  connectedCallback() {
+    const template = document.getElementById("player-rank-component");
     const playerRank = template.content.cloneNode(true);
-    this.shadowRoot.appendChild( playerRank );
+    this.shadowRoot.appendChild(playerRank);
   }
 }
-// customElements.define("player-rank-component", TopPlayers);
