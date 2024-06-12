@@ -1,4 +1,4 @@
-import { stylesheet } from "../theme/platformTheme.js";
+import { stylesheet } from "../theme/profileTheme.js";
 
 export default class Profile extends HTMLElement {
   constructor() {
@@ -7,7 +7,7 @@ export default class Profile extends HTMLElement {
   
   connectedCallback() {
     const style = document.createElement("style");
-    const template = document.getElementById("profile-page");
+    const template = document.getElementById("profile-page-template");
     const templateContent = template.content.cloneNode(true);
     
     style.textContent = stylesheet;
@@ -16,4 +16,3 @@ export default class Profile extends HTMLElement {
     this.appendChild(templateContent);
   }
 }
-customElements.define("profile-page", Profile);

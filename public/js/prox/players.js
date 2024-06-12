@@ -9,7 +9,6 @@ const ProxiedPlayers = new Proxy(Players, {
    
     if ( prop === "playersList" )
       {
-        console.log("what");
         window.dispatchEvent( new Event("playersListLoaded") );
       }
 

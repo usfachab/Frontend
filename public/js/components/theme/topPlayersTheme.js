@@ -36,7 +36,7 @@ stylesheet.replaceSync(`
       algin-items: center;
       line-height: 4;
       color:#fff;
-      font-size: 10px;
+      font-size: 8px;
   
   }
   .points {
@@ -45,7 +45,7 @@ stylesheet.replaceSync(`
       height: 20%;
       /* line-height: 2; */
       text-align: center;
-      font-size: 8px;
+      font-size: 6px;
   }
   
 

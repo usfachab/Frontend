@@ -39,7 +39,6 @@ export function loadStartGameAndPlayerRankComponents(container)
             const points =
               rankedPlayersComponentDiv.shadowRoot.querySelector(".points");
             points.textContent = element.address.zipcode + " pts";
-            console.log("Players Loaded");
           });
         }
       });

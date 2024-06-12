@@ -1,6 +1,7 @@
 import Sidebar from "../components/Sidebar.js"
 
 import { loadStartGameAndPlayerRankComponents } from "../assets/startGameAndPlayerRank.js"
+import { loadUserProfileView } from "../assets/loadUserProfileView.js";
 
 import { stylesheet } from "../theme/platformTheme.js"
 
@@ -26,9 +27,9 @@ export default class Platform extends HTMLElement {
     switch (window.location.pathname)
     {
       case "/platform":
-        {
-          loadStartGameAndPlayerRankComponents(middleSection);
-      }
+        loadStartGameAndPlayerRankComponents(middleSection);
+      case "/profile":
+        loadUserProfileView(middleSection);
     }
   }
 }
