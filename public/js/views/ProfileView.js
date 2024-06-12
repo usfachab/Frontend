@@ -14,5 +14,10 @@ export default class Profile extends HTMLElement {
     this.appendChild(style);
     this.setAttribute("id", "profile-page");
     this.appendChild(templateContent);
+    const win = this.querySelector(".win");
+    win.textContent = 'Win Count: 10';
+
+    const loss = this.querySelector(".loss");
+    loss.textContent = 'Loss Count: 0';
   }
 }
