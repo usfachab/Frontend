@@ -60,7 +60,6 @@ const stylesheet = `
     min-width: 250px;
     border-left: 1px solid rgba(100, 100, 100, 0.25) !important;
 }
-
 `;
 
 export { stylesheet };

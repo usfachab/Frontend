@@ -10,7 +10,7 @@ const notFound = () => {
     return container;
 }
 
-const viewProfile = () => {
+const viewPlatform = () => {
     return ( document.createElement("platform-page") );
 }
 
@@ -18,6 +18,7 @@ export const routes = [
     { path: '/', view: viewCallback },
     { path: '/login', view: viewCallback },
     { path: '/platform', view: viewCallback },
-    { path: '/profile', view: viewProfile },
+    { path: '/profile', view: viewPlatform },
+    { path: '/game', view: viewPlatform },
     { path: '*', view: notFound }
 ]

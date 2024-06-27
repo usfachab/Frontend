@@ -1,7 +1,9 @@
 import Sidebar from "../components/Sidebar.js"
+import { gameModeImg } from "../assets/srcs.js";
 
 import { loadStartGameAndPlayerRankComponents } from "../assets/startGameAndPlayerRank.js"
-import { loadUserProfileView } from "../assets/loadUserProfileView.js";
+import { loadUserProfileView } from "../assets/loadUserProfileView.js"
+import { loadGameView } from "../assets/loadGameView.js"
 
 import { stylesheet } from "../theme/platformTheme.js"
 
@@ -28,8 +30,15 @@ export default class Platform extends HTMLElement {
     {
       case "/platform":
         loadStartGameAndPlayerRankComponents(middleSection);
+        break;
       case "/profile":
         loadUserProfileView(middleSection);
+        break;
+      case "/game":
+        loadGameView(middleSection, gameModeImg);
+        break;
+      default:
+        break;
     }
   }
 }

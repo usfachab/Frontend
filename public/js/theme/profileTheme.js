@@ -14,6 +14,7 @@ export const stylesheet = `
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    padding: 20px;
 }
 .common {
     display: flex;
@@ -50,53 +51,56 @@ div img {
     font-size: 8px;
 }
 .loss {
-    flex-grow: 2;
-    flex-basis: 2%}
-
-#second {
+  flex-grow: 2;
+  flex-basis: 2%}
+  
+  #second {
     border: solid 1px rgb(100 100 100 / .5) !important;
     border-radius: 18px;
     width: 100%;
     height: 60%;
+    overflow: hidden;
     overflow-y:  scroll;
-    // scrollbar-width: thin;
-    // scrollbar-color: rgb(255 255 255 / .2) rgb(100 100 100 / .1);
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255 255 255 / .2) rgb(100 100 100 / .1);
     }
-
-#second::-webkit-scrollbar
-{
+    
+  .wrapper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+  #second::-webkit-scrollbar
+  {
+    position: absolute !important;
     width: 5px;
-    background-color: #f8bbd0  ;
+    background-color: rgb(100 100 100 / .1);
 }
     
 #second::-webkit-scrollbar-track
 {
-    // -webkit-box-shadow: inset 0 0 6px #f06292 ;
+    height: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgb(100 100 100 / .1) ;
     border-radius: 10px;
-    background-color: #f8bbd0  ;
+    // background-color: #f8bbd0  ;
     
     // Add Border on Track
     // border-left: 3px solid white;
     // border-right: 3px solid white;
 }
     
-    #second::-webkit-scrollbar-thumb
-    {
+  #second::-webkit-scrollbar-thumb
+  {
         height: 10%;
-border-radius: 20px;
--webkit-box-shadow: inset 0 0 px #ad1457 ;
-// background-color: #e91e63;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 px #ad1457 ;
+  background-color: #e91e63;
 
 }
 
-.wrapper {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 20px;
-}
 
 p {
   font-size: 16px;
